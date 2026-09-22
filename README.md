@@ -17,11 +17,36 @@
 6. Вывести результаты расчетов с подстановкой всех значений в текст.
 7. Конец
 # Блок-схема
-<img width="390" height="617" alt="изображение" src="https://github.com/user-attachments/assets/abc5934e-a8c5-462b-ad07-c4c712486a7d" />
+<img width="412" height="598" alt="image" src="https://github.com/user-attachments/assets/5de83a97-c7d7-42d2-aef0-f91a68b531bd" />
+
 
 
 https://drive.google.com/file/d/1m-ylW_rvMsQWKd1H7AkcSOy46maOChqW/view?usp=sharing
 # 2. Реализация программы
+~~~
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_CTYPE, "RUS");
+    double megajoules;
+    double kilocalories;
+    double kilowatt_hours;
+
+    const double MJ_TO_KCAL = 238.8459;
+    const double MJ_TO_KWH = 1.0 / 3.6;
+
+    printf("Введите значение в Мегаджоулях (МДж): ");
+    scanf("%lf", &megajoules);
+
+    kilocalories = megajoules * MJ_TO_KCAL;
+    kilowatt_hours = megajoules * MJ_TO_KWH;
+
+    printf("\nРезультаты пересчета для %.4f МДж:\n", megajoules);
+    printf("-> Килокалории (ккал): %.4f\n", kilocalories);
+    printf("-> Киловатт-часы (кВт*ч): %.4f\n", kilowatt_hours);
+}
+~~~
 # 3. Результат работы программы
 Введите значение в Мегаджоулях (МДж): 600
 
