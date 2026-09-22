@@ -42,9 +42,9 @@ int main() {
     kilocalories = megajoules * MJ_TO_KCAL;
     kilowatt_hours = megajoules * MJ_TO_KWH;
 
-    printf("\nРезультаты пересчета для %.4f МДж:\n", megajoules);
-    printf("-> Килокалории (ккал): %.4f\n", kilocalories);
-    printf("-> Киловатт-часы (кВт*ч): %.4f\n", kilowatt_hours);
+    printf("\nРезультаты пересчета для %.1e МДж:\n", megajoules);
+    printf("-> Килокалории (ккал): %.1e\n", kilocalories);
+    printf("-> Киловатт-часы (кВт*ч): %.1e\n", kilowatt_hours);
 }
 ~~~
 # 3. Результат работы программы
